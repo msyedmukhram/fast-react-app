@@ -99,7 +99,7 @@ function CreateOrder() {
 export async function action({request}){
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  console.log(formData);
+  
 
   const order = {
     ...data,
@@ -107,7 +107,7 @@ export async function action({request}){
     priority: data.priority === 'on'
   }
 
-  console.log(order);
+ 
 
   
 
